@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  /* colors: */
+  --clr-primary: #333333;
+  --clr-neutral: white;
+  --clr-accent: #BDBDBD;
+
+/* font-weight: */
+  --fw-bold: 700;
+  --fw-thin: 400;
+
+  /* font-family: */
+  --ff-base: 'Space Mono', monospace;
+  --ff-heading: 'Inconsolata', monospace;
+}
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* general styling */
+
+body {
+  display: grid;
+
+  min-height: 100vh;
+
+  font-size: 1rem;
+
+  --margin-container: 2em 0em 2em 1.5em;
+  --margin-header: 1em 0em 0em 1.5em;
+  --padding-paragraph: 3em 4em 3em 0em;
+  --padding-button: 1.25em 2.5em;
+  --padding-image: 3em 2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* container styling */
+
+.container {
+  display: grid;
+
+  margin: var(--margin-container);
+
+  gap: 2em;
+}
+
+/* styling even-columns */
+.even-columns {
+  display: flex;
+}
+
+
+
+/* heading and paragraph styling */
+
+.primary-logo {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+  font-size: 1.5rem;
+}
+.primary-header {
+  margin: var(--margin-header);
+}
+
+.fs-primary-heading.fw-bold {
+  font-size: 2.5rem;
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-base);
+
+  color: var(--clr-primary);
+}
+
+p {
+  font-family: var(--ff-base);
+
+  padding: var(--padding-paragraph);
+}
+
+footer p {
+  color: var(--clr-accent);
+  font-size: .75rem;
+  margin-left: 3.5em;
+  text-align: center;
+}
+
+footer a {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+}
+
+/* button styling */
+.button_homepage {
+  background: var(--clr-primary);
+  color: var(--clr-neutral);
+
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-base);
+
+  padding: var(--padding-button);
+}
+
+button {
+  border: none;
+}
+
+/* image styling */
+img {
+  min-width: 95%;
+padding: var(--padding-image);
+}
+
+@media screen and (min-width: 64em) {
+  body {
+    font-size: 1.5rem;
+
+    --margin-container: 2em 0em 2em 1.5em;
+    --margin-header: 1.5em 0em 0em 3em;
+    --padding-paragraph: 2em 13em 2em 0em;
+    --padding-button: 1.5em 2.25em;
+    --padding-image: 0em 3em;
+  }
+
+  .container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". ."; 
+  }
+
+  /* heading and paragraph styling */
+
+.primary-logo {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+  font-size: 1.5rem;
+}
+.primary-header {
+  margin: var(--margin-header);
+}
+
+.fs-primary-heading.fw-bold {
+  font-size: 4rem;
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-base);
+
+  color: var(--clr-primary);
+}
+
+p {
+  font-family: var(--ff-base);
+
+  padding: var(--padding-paragraph);
+}
+
+footer p {
+  color: var(--clr-accent);
+  font-size: 1rem;
+  margin-bottom: -6em;
+  margin-left: 3.5em;
+  text-align: center;
+}
+
+footer a {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+}
+
+/* image styling */
+img {
+  width: 100%;
+padding: var(--padding-image);
+}
+
+/* button styling */
+.button_homepage {
+  background: var(--clr-primary);
+  color: var(--clr-neutral);
+
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-base);
+  font-size: 1rem;
+
+  padding: var(--padding-button);
+}
+}
